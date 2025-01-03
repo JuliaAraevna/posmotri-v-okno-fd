@@ -247,6 +247,7 @@ ol {
   padding: 10px 20px; /* Отступы */
   cursor: pointer; /* Указатель при наведении */
   transition: all 0.3s ease; /* Плавный переход для эффектов */
+   cursor: pointer;
 }
 
 /* Стили для кнопки "Найти" */
@@ -254,6 +255,7 @@ ol {
   position: relative; /* Позиционирование для размещения */
   margin-left: auto; /* Сдвигаем кнопку вправо */
   width: auto; /* Автоматическая ширина */
+  size: 100px;
 }
 
 /* Стили для кнопки "Показать ещё" */
@@ -343,6 +345,22 @@ ol {
 .content__list-item {
   padding-left: 3px; /* Отступ слева */
   padding-right: 3px; /* Отступ справа */
+  cursor: pointer;
+}
+.result__video-container,
+.content__list {
+  position: relative; /* Для позиционирования прелоадеров */
 }
 
+.result__video-container::before,
+.content__list::before {
+  content: ''; /* Псевдоэлемент для прелоадера */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Вверху */
+  left: 0; /* Слева */
+  right: 0; /* Справа */
+  bottom: 0; /* Снизу */
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  z-index: 10; /* Поверх остальных элементов */
+}
 
