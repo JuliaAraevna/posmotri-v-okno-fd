@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display:flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -49,3 +50,48 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+/* Стили для контейнера контента */
+.content {
+  display: grid; /* Задаем грид для контейнера .content */
+  grid-template-columns: repeat(3, 1fr); /* Создаем 3 равные колонки */
+  grid-template-rows: auto 1fr; /* Строки: первая — авто, вторая занимает оставшееся пространство */
+  gap: 20px; /* Задаем отступы между элементами */
+  align-items: end; /* Прижимаем элементы к низу вертикальной оси */
+  height: 100%; /* Задаем высоту 100% */
+  width: 100%; /* Задаем ширину 100% */
+}
+
+.content__list-container {
+  grid-area: 1 / 1 / 2 / 4; /* Расположение для контейнера списка */
+  max-height: 300px; /* Устанавливаем максимальную высоту */
+  overflow-y: auto; /* Добавляем скролл при переполнении по вертикали */
+}
+
+.content__details {
+  grid-area: 2 / 1 / 3 / 4; /* Занимает всю доступную ширину внизу */
+  padding: 20px; /* Добавляем отступы между заголовком и зоной с карточками */
+}
+
+.search-form {
+  display: flex; /* Задаем флекс для форм */
+  justify-content: space-between; /* Пропорционально распределяем элементы */
+  align-items: center; /* Центрируем по вертикали */
+  grid-area: 1 / 1 / 1 / 4; /* Занимает первую строку полностью */
+}
+
+/* Пример оформления для элементов в .search-form */
+.search-form input {
+  flex-grow: 1; /* Позволяет полю ввода занимать все оставшееся пространство */
+  margin-right: 10px; /* Отступ между полем ввода и кнопкой */
+}
+
+.search-form button {
+  flex-shrink: 0; /* Предотвращает уменьшение кнопки */
+}
+
+/* Пример оформления для заголовков */
+.content__details h2 {
+  margin-bottom: 10px; /* Отступ между заголовком и контентом */
+}
+
+
