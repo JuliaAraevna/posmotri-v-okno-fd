@@ -84,7 +84,7 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1; /* Занимает всё доступное пространство */
   padding: 12px; /* Внутренние отступы для описания */
-  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  background-color: #1B1919;
 }
 
 
