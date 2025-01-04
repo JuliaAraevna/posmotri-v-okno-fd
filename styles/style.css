@@ -134,13 +134,14 @@ ol {
 .search-form__label {
   display: flex; /* Выстраиваем элементы внутри лейбла в линию */
   width: fit-content; /* Ширина по содержимому */
+   align-items: center;
 }
 
 /* Стили для текстового поля ввода */
 .search-form input[type="text"] {
-  border-top: 1px solid #ccc; /* Граница сверху */
-  border-bottom: 1px solid #ccc; /* Граница снизу */
-  color: #333; /* Цвет текста */
+  border-top: 1px solid #FFFFFF; /* Граница сверху */
+  border-bottom: 1px solid #FFFFFF; /* Граница снизу */
+  color: #FFFFFF 70%; /* Цвет текста */
   background-color: #fff; /* Цвет фона */
   font-family: 'Fira Sans Condensed', sans-serif; /* Шрифт */
   font-size: 18px; /* Размер шрифта */
@@ -153,7 +154,7 @@ ol {
   display: inline-block; /* Для корректного отображения */
   width: 20px; /* Ширина чекбокса */
   height: 20px; /* Высота чекбокса */
-  border: 2px solid #ccc; /* Граница чекбокса */
+  border: 2px solid #FFFFFF; /* Граница чекбокса */
   background-color: #fff; /* Цвет фона чекбокса */
   cursor: pointer; /* Курсор при наведении */
 }
@@ -177,11 +178,11 @@ ol {
 
 /* Стили для фокуса чекбокса */
 .search-form__pseudo-checkbox:focus-visible {
-  outline: 2px solid #007bff; /* Граница при фокусе */
+  outline: 1px solid #FFFFFF; /* Граница при фокусе */
 }
 
 /* Подчёркивание текста при наведении на чекбокс */
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text{
   text-decoration: underline; /* Подчёркивание текста */
 }
 .search-form button {
@@ -213,7 +214,7 @@ ol {
 /* Оформление ссылки */
 .content__card-link {
     text-decoration: none; /* Убираем подчеркивание */
-    color: #0088cc; /* Цвет текста */
+    color: #FFFFFF; /* Цвет текста */
 }
 
 .content__card-link:hover {
@@ -249,15 +250,6 @@ ol {
   transition: all 0.3s ease; /* Плавный переход для эффектов */
    cursor: pointer;
 }
-
-/* Стили для кнопки "Найти" */
-.search-form__submit-button {
-  position: relative; /* Позиционирование для размещения */
-  margin-left: auto; /* Сдвигаем кнопку вправо */
-  width: auto; /* Автоматическая ширина */
-  size: 100px;
-}
-
 /* Стили для кнопки "Показать ещё" */
 .more-button {
   width: 100%; /* Растягиваем на всю ширину контейнера */
@@ -269,52 +261,25 @@ ol {
 }
 
 .button:active {
-  color: #ffcc00; /* Цвет текста при нажатии (пример) */
+  color: #FFFFFF; /* Цвет текста при нажатии (пример) */
 }
 
 .button:focus-visible {
-  outline: 2px solid #ffcc00; /* Обводка при фокусе */
+  outline: 2px solid #FFFFFF; /* Обводка при фокусе */
 }
 
 /* Сброс состояния :focus */
 .button:focus {
   outline: none; /* Убираем стандартную обводку */
 }
-/* Общие стили для кнопок */
-.button {
-  border: 2px solid transparent; /* Задаем границу */
-  color: #fff; /* Цвет текста */
-  font-family: 'Fira Sans Condensed', sans-serif; /* Шрифт */
-  background-color: transparent; /* Прозрачный фон */
-  padding: 10px 20px; /* Отступы */
-  cursor: pointer; /* Курсор при наведении */
-}
 
 /* Стили для кнопки "Найти" */
 .search-form__submit-button {
-  position: absolute; /* Положение в конце контейнера */
+  display:flex;
+   margin-left: auto;
   right: 0; /* Выравнивание по правому краю */
   size: 100px; /* Размер кнопки */
 }
-
-/* Стили для кнопки "Показать ещё" */
-.more-button {
-  width: 100%; /* Растягивается на всю ширину контейнера */
-}
-
-/* Стили для состояний кнопок */
-.button:hover {
-  text-decoration: underline; /* Подчёркивание текста при наведении */
-}
-
-.button:active {
-  color: #ff0000; /* Цвет текста при активном состоянии */
-}
-
-.button:focus-visible {
-  outline: 2px solid #00ff00; /* Обводка при фокусе */
-}
-
 /* Стили для карточек */
 .content__list-item {
   display: block; /* Блочный элемент */
@@ -328,16 +293,16 @@ ol {
 
 /* Стили для активной карточки */
 .content__card-link_current {
-  background-color: rgba(255, 255, 255, 0.2); /* Фон для активной карточки */
+  background-color: #FFFFFF; /* Фон для активной карточки */
 }
 
 /* Стили для карточки при наведении */
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline; /* Подчёркивание текста при наведении */
 }
 
 /* Стили для карточки в фокусе */
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: none; /* Сброс обводки на состоянии :focus */
 }
 
