@@ -236,7 +236,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 /* Применяем позиционирование для контейнера списка */
 .content__list {
-  position: relative; 
+  position: relative;
 }
 
 /* Оформление для подробностей контента */
