@@ -329,8 +329,3 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   color: #D9D9D9;                  /* Цвет текста */
 }
 
-/* Установка отступов слева и справа для .content__list-item */
-.content__list-item {
-  padding-left: 3px;              /* Отступ слева */
-  padding-right: 3px;             /* Отступ справа */
-}
